@@ -1,0 +1,6 @@
+import re
+f = open('titles','rw')
+str = f.read()
+str1 = re.sub(r'(?<![a-z])[\x80,\xe2,\x9c,\x9d,\x99,\n](?![a-z])', ' ', str)
+str1 = str1.strip().split('\n')
+print str1
